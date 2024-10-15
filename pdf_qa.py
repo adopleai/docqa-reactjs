@@ -15,7 +15,6 @@ class Docqa:
         self.retriever = self._get_documents_knowledge_base(file_paths)
         self.llm = AzureChatOpenAI(
             azure_endpoint="https://azureadople.openai.azure.com/",
-            api_key="d40171e5187047b3928b8f3f63900e4a",
             api_version="2023-07-01-preview",azure_deployment="GPT-4o"
         )
 
