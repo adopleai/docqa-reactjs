@@ -21,10 +21,12 @@ class Docqa:
 
     def _extract_text_from_pdfs(self, file_paths):
         try:
-            
-            loader = PyMuPDFLoader(file_paths[0]) 
-            docs = loader.load()
+            docs = []
+            loaders = [PyMuPDFLoader(file_obj) for file_obj in file_paths]
+            for loader in loaders:
+                docs.extend(loader.load())
             return docs
+    
         except Exception as e:
             print(f"Error in _extract_text_from_pdfs: {e}")
             return []

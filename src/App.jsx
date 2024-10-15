@@ -1,7 +1,3 @@
-import Main from "./components/Main/Main";
-import MyAgGrid from "./MyAgGrid";
-import Sidebar from "./components/Sidebar/Sidebar";
-import Home from "./components/Main/Home";
 import ChatPage from "./components/Main/ChatPage";
 
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";

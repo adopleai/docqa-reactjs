@@ -5,7 +5,6 @@ import 'ag-grid-community/styles/ag-grid.css';
 import 'ag-grid-community/styles/ag-theme-quartz.css';
 import "./Main.css";
 import { Context } from "../../context/Context";
-import { LicenseManager } from "ag-grid-enterprise";
 import { useNavigate } from "react-router-dom";
 import axios from 'axios';
 
@@ -187,6 +186,7 @@ const ChatPage = () => {
               style={{ display: "none" }}  // Hide the input
               onChange={handleFileChange}
               accept=".pdf,.json"
+              multiple
             />
             <div onClick={handleIconClick}>
               <img src={assets.attachment_icon} alt="attachment" className="attachment" />
